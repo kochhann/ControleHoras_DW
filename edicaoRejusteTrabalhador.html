@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Juliano Kochhann" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Date & Time Picker CSS -->
+	<link rel="stylesheet" href="css/datepicker.css" type="text/css" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Sistema de Ajuste e Controle de Horas</title>
+
+</head>
+<body>
+
+	<!-- Page Title
+	============================================= -->
+	<section id="page-title" class="page-title-center">
+		<div class="container">
+			<h1>C R O N</h1>
+			<h2>Sistema de Ajuste de Horas</h2>
+			<ol class="breadcrumb"></ol>
+		</div>
+	</section><!-- #page-title end -->
+		
+	<!-- Content
+	============================================= -->
+	<section id="content">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="page-title container">
+					<h3>Realizar ajustes</h3>
+				</div>
+				<div class="alert alert-success">
+					<div class="row col-mb-50 mb-0">
+						<div class="col-md-6">
+							<i class="icon-user"></i>    <strong>Usuário: Stephen Strange</strong>							
+						</div>
+						<div class="col-md-6">
+							<i class="icon-wrench"></i>    <strong>Perfil: Trabalhador</strong>
+						</div>
+					</div>
+				</div>
+				<table>
+					<tr>
+						<td colspan="9"><h4>Consulta</strong></h4>
+					</tr>
+					<tr>
+						<td>Entrada</td>
+						<td><input type="text" value="" class="form-control text-left component-datepicker default" placeholder="DD/MM/YYYY"></td>
+						<td></td>
+						<td>Saída</td>
+						<td><input type="text" value="" class="form-control text-left component-datepicker default" placeholder="DD/MM/YYYY"></td>
+						<td>    </td>
+						<td>Justificativa</td>
+						<td>
+							<select class="select-hide form-control bottommargin-sm" style="width:100%;">
+								<option value="01">Prod. Contúdo</option>
+								<option value="02">Versionamento</option>
+								<option value="03">Capacitação</option>
+								<option value="04">Empréstimo</option>
+							</select>
+						</td>
+						<td><button type="button" class="btn btn-success btn-block">Buscar</button></td>
+						<td><button type="button" class="btn btn-success btn-block">Adicionar</button></td>
+						<td><button type="button" class="btn btn-warning btn-block">Voltar</button></td>
+					</tr>
+					<tr>
+						<td colspan="8"><ol></ol></td>
+					</tr>
+				</table>
+				<div class="content-wrap bg-light">
+					<div class="container">
+						<div class="row col-mb-50 mb-0">
+							<table class="table">
+								<thead>
+									<tr>
+										<th width="15%">Data</th>
+										<th width="15%">Entrada</th>
+										<th width="15%">Saída</th>
+										<th width="15%">Horas</th>
+										<th width="25%">Justificativa</th>
+										<th>Opções</i></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="text" class="form-control text-left component-datepicker default" value="10/06/2016"></td>
+										<td><input class="form-control" type="text" value="08:00"></td>
+										<td><input class="form-control" type="text" value="12:00"></td>
+										<td><input class="form-control" type="text" value="04:00"></td>
+										<td>
+											<select class="select-hide form-control bottommargin-sm" style="width:100%;">
+												<option value="01">Prod. Contúdo</option>
+												<option value="02" selected>Versionamento</option>
+												<option value="03">Capacitação</option>
+												<option value="04">Empréstimo</option>
+											</select>
+										</td>
+										</td>
+										<td>
+											<i class="btn btn-sm icon-edit"></i>
+											<i class="btn btn-sm icon-trash"></i>
+											<i class="btn btn-sm icon-envelope"></i>
+										</td>
+									</tr>
+									<tr>
+										<td>10/06/2016</td>
+										<td>13:00</td>
+										<td>17:00</td>
+										<td>04:00</td>
+										<td>Produção</td>
+										<td>
+											<i class="btn btn-sm icon-edit"></i>
+											<i class="btn btn-sm icon-trash"></i>
+											<i class="btn btn-sm icon-envelope"></i>
+										</td>
+									</tr>
+									<tr>
+										<td>11/06/2016</td>
+										<td>10:00</td>
+										<td>12:00</td>
+										<td>02:00</td>
+										<td>Capacitação</td>
+										<td>
+											<i class="btn btn-sm icon-edit"></i>
+											<i class="btn btn-sm icon-trash"></i>
+											<i class="btn btn-sm icon-envelope"></i>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="6"><strong>Legendas</strong></td>
+									</tr>
+									<tr>
+										<td><i class="icon-edit"></i></td>
+										<td colspan="5">Editar</td>
+									</tr>
+									<tr>
+										<td><i class="icon-trash"></i></td>
+										<td colspan="5">Excluir</td>
+									</tr>
+									<tr>
+										<td><i class="icon-envelope"></i></td>
+										<td colspan="5">Enviar para análise</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>						
+					</div>
+					<ol class="breadcrumb"></ol>
+				</div>
+			</div>
+		</div>
+		
+	</section><!-- #content end -->
+
+	<!-- JavaScript
+	============================================= -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/functions.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+	<!-- Date & Time Picker JS -->
+	<script src="js/datepicker.js"></script>
+
+	<script>
+		$(function() {
+			$('.component-datepicker.default').datepicker({
+				autoclose: true,
+				startDate: "today",
+				format: "dd/mm/yyyy",
+				startDate: "today",
+				todayHighlight: true
+			});
+		})
+	</script>
+		
+
+
+</body>
+</html>
