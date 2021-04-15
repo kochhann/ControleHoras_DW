@@ -49,11 +49,13 @@
 								</div>
 								<div class="col-12 form-group">
 									<label for="login-form-username">E-mail:</label>
-									<input required type="email" id="login-form-username" name="login-form-username" value="" class="form-control" />
+									<input required type="email" id="login-form-username" name="login-form-username" value=""
+									class="form-control" />
 								</div>
 								<div class="col-12 form-group">
 									<label for="login-form-password">Password:</label>
-									<input required type="password" id="login-form-password" name="login-form-password" value="" class="form-control" />
+									<input required type="password" id="login-form-password" name="login-form-password" value=""
+									class="form-control" />
 								</div>
 								<div class="col-12 form-group">
 									<button class="btn btn-secondary m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
@@ -107,6 +109,21 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+	<script>
+		document.getElementById('login-form-username').oninvalid = function(evt) {  
+			evt.preventDefault();
+			if (!this.validity.valid) {
+				alert("Preencha o seu e-mail");
+			}
+		};
+		document.getElementById('login-form-password').oninvalid = function(evt) {  
+			evt.preventDefault();
+			if (!this.validity.valid) {
+				alert("Preencha a sua senha");
+			}
+		};
+	</script>
 
 
 </body>
