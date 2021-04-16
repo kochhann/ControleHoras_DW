@@ -43,18 +43,19 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div>
-							<form id="login-form" name="login-form" class="row" action="#" method="post">
+							<form id="login-form" name="login-form" class="row" action="#" method="post"
+							onsubmit="return validateForm()">
 								<div class="col-12" style="padding-top: 50px;">
 									<h3>Acesse sua conta</h3>
 								</div>
 								<div class="col-12 form-group">
 									<label for="login-form-username">E-mail:</label>
-									<input required type="email" id="login-form-username" name="login-form-username" value=""
+									<input type="email" id="login-form-username" name="login-form-username" value=""
 									class="form-control" />
 								</div>
 								<div class="col-12 form-group">
 									<label for="login-form-password">Password:</label>
-									<input required type="password" id="login-form-password" name="login-form-password" value=""
+									<input type="password" id="login-form-password" name="login-form-password" value=""
 									class="form-control" />
 								</div>
 								<div class="col-12 form-group">
@@ -111,16 +112,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
 
 	<script>
-		document.getElementById('login-form-username').oninvalid = function(evt) {  
-			evt.preventDefault();
-			if (!this.validity.valid) {
-				alert("Preencha o seu e-mail");
+		function validateForm() {
+			var mail = document.forms["login-form"]["login-form-username"].value;
+			var pass = document.forms["login-form"]["login-form-password"].value;
+			if (mail == "") {
+				if (pass == ""){
+					alert("Preencha os dados de login!");
+					return false;
+				}
+				alert("O campo E-mail é de preenchimento obrigatório!");
+				return false;
 			}
-		};
-		document.getElementById('login-form-password').oninvalid = function(evt) {  
-			evt.preventDefault();
-			if (!this.validity.valid) {
-				alert("Preencha a sua senha");
+			if (pass == "") {
+				alert("O campo Password é de preenchimento obrigatório!");
+				return false;
 			}
 		};
 	</script>
